@@ -115,7 +115,7 @@ import be.fedict.commons.eid.consumer.tlv.TlvParser;
         }
         
         public static String format(GregorianCalendar calendar){
-    	    SimpleDateFormat fmt = new SimpleDateFormat("ddMMyyyy");
+    	    SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
     	    fmt.setCalendar(calendar);
     	    String dateFormatted = fmt.format(calendar.getTime());
     	    return dateFormatted;

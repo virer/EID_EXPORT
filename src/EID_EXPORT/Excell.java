@@ -32,7 +32,7 @@ public class Excell {
 	    	row.createCell(4).setCellValue(myeID.getDob());
 	    
 	    	// Photo filename
-	    	photoFilename = myeID.getLastName() + "_" + myeID.getDob();
+	    	photoFilename = myeID.getNat_id();
 	    	row.createCell(6).setCellValue(photoFilename + ".jpg");
 	    }
 	    // Write the output to a file

@@ -190,7 +190,7 @@ public class EID_EXPORT {
 				for( MyeID mye_a: myeID) {
 				
 					// Define filename(s)
-					String filename = mye_a.getLastName() + "_"+ mye_a.getDob();
+					String filename = mye_a.getNat_id();
 				
 					// Save jpg
 					String jpgfilename = System.getenv("USERPROFILE") + "\\Documents\\" + filename + ".jpg";
@@ -208,7 +208,7 @@ public class EID_EXPORT {
 				}
 				
 			    // Fill the excell  file
-				String sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm").format(new Date());
+				String sdf = new SimpleDateFormat("yyyy-MM-dd_HH'h'mm").format(new Date());
 				Excell a = new Excell();
 				String ExcellPath = System.getenv("USERPROFILE") + "\\Documents\\";
 				String filename = "EID_EXPORT_" + sdf;
