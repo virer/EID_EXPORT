@@ -15,6 +15,7 @@ public class Excell {
 	{
 		XSSFWorkbook wb = new XSSFWorkbook(template);
 	    XSSFSheet sheet = wb.getSheet("ACCESSPOINT - Import personnes");
+	    String photoFilename = "";
 	    int y = 2;
 	    for( MyeID myeID: myeIDArr) {
 	    	XSSFRow row = sheet.createRow(y);
@@ -31,7 +32,8 @@ public class Excell {
 	    	row.createCell(4).setCellValue(myeID.getDob());
 	    
 	    	// Photo filename
-	    	row.createCell(6).setCellValue(filename + ".jpg");
+	    	photoFilename = myeID.getLastName() + "_" + myeID.getDob();
+	    	row.createCell(6).setCellValue(photoFilename + ".jpg");
 	    }
 	    // Write the output to a file
 	    FileOutputStream fileOut = new FileOutputStream(Path + filename + ".xlsx");
